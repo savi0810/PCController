@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "PCController.Server": {
+      "commandName": "Project",
+      "commandLineArgs": "--local",
+      "dotnetRunMessages": true
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "PCController",
+    "slug": "pccontroller-client",
+    "version": "1.0.0",
+    "orientation": "landscape",
+    "userInterfaceStyle": "dark",
+    "experiments": {
+      "reactCompiler": true
+    },
+    "icon": "./assets/images/icon.png",
+    "scheme": "pccontroller",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#050406"
+      },
+      "package": "com.savi0810.pccontrollerclient",
+      "permissions": ["ACCESS_WIFI_STATE", "CHANGE_WIFI_MULTICAST_STATE"]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#050406"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true,
+            "buildArchs": ["arm64-v8a"],
+            "enableMinifyInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true,
+            "extraProguardRules": "-keep class com.github.druk.** { *; }\n-keep class com.balthazargronon.** { *; }"
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "11faca5f-0b5a-4185-b201-3ce6bf2e83cc"
+      }
+    },
+    "owner": "savi0810"
+  }
+}
